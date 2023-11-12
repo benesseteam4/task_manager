@@ -1,0 +1,22 @@
+<h1>課題入力フォーム</h1>
+<%= form_with model: @task do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :deadline %>
+    <%= form.date_field :deadline %>
+  </div>
+  <div>
+    <%= form.label :duration %>
+    <%= form.text_field :duration %>
+  </div>
+  <div>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
