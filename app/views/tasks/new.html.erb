@@ -1,30 +1,24 @@
-<h1>課題入力フォーム</h1>
+<h22>課題入力フォーム</h22>
 <%= form_with model: @task do |form| %>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class = "kadaiform">
+    <div class = "kadai">
+      <%= form.label :タイトル %>
+      <%= form.text_field :title %>
+    </div>
+    <div class = "kadai">
+      <%= form.label :期限 %>
+      <%= form.date_field :deadline %>
+    </div>
+    <div class = "kadai">
+      <%= form.label :予想時間 %>
+      <%= form.text_field :duration %>
+    </div>
+    <div class = "kadai">
+      <%= form.label :説明 %>
+      <%= form.text_area :description %>
+    </div>
   </div>
-  <div>
-    <%= form.label :student_id %>
-    <%= form.text_field :student_id %>
-  </div>
-  <div>
-    <%= form.label :teacher_id %>
-    <%= form.text_field :teacher_id %>
-  </div>
-  <div>
-    <%= form.label :deadline %>
-    <%= form.date_field :deadline %>
-  </div>
-  <div>
-    <%= form.label :duration %>
-    <%= form.text_field :duration %>
-  </div>
-  <div>
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-  <div>
-    <%= form.submit %>
+  <div class = "submitbutton">
+    <%= form.submit "送信"%>
   </div>
 <% end %>
