@@ -13,3 +13,90 @@
  *= require_tree .
  *= require_self
  */
+ 
+header{
+   height: 30pt;
+   background-color: #D59524;
+ }
+ 
+body{
+  background-color: #365840;
+}
+
+footer{
+  position: fixed;
+  height: 30pt;
+  background-color: #D59524;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+}
+.hoge{
+    position: absolute; 
+    bottom: 0; /* 下端に配置 */
+    right: 0; /* 右端に配置 */
+    margin-right:20px;
+    
+ }
+
+
+/*トップページ*/
+.space-top{
+  height: 48pt;
+}
+
+.h1-top{
+  font-size: 36pt;
+  color: white;
+  text-align: center;
+}
+
+
+.btn-primary{
+  margin: 24pt auto;
+  justify-content: center;
+  display: flex;
+  font-size: 32pt;
+  color: white;
+  background-color:#C69D51;
+  height: 60pt;
+  width: 450pt;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+
+h22{
+    padding-top: 45px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    text-decoration-line: underline;
+    text-decoration-color: #D2C763;
+    color: #D2C763;
+    font-size: 40px;
+}
+
+.kadaiform {
+    text-align: center;
+    margin-top: 40px;
+    width: 60%;
+    height: 500px;
+    background-color: #E3CBA1;
+}
+
+.kadai {
+    text-align: center;
+    font-size: 30px;
+    gap: 20px;
+    color: #333333;
+    margin: 40px;
+}
+
+.submitbutton input{
+    margin-top: 30px;
+    text-align: center;
+    width: 10%;
+    background-color: #C69D51;
+    color: white;
+}
