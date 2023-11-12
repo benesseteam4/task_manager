@@ -1,0 +1,16 @@
+<% if current_user.teacher? %>
+  <!-- 先生向けの表示 -->
+  <%= link_to "課題入力フォームへ", newのページに飛ぶパス %>
+<h3>課題一覧</h3>
+  <% @tasks.each do |t| %>
+      <%= t.title %>
+      <%= t.description %>
+      <%= t.deadline %>
+  <% end %>
+<% else %>
+  <!-- 生徒向けの表示 -->
+  <h2>タスク一覧</h2>
+   <%= t.title %>
+      <%= t.description %>
+      <%= t.deadline %>
+<% end %>
