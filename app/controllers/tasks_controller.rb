@@ -1,12 +1,5 @@
 class TasksController < ApplicationController
   def index
-    if current_user.is_a?(Student)
-      @tasks = current_user.tasks
-    elsif current_user.is_a?(Teacher)
-      @tasks = current_user.tasks
-    else
-      # 他のユーザータイプが追加された場合に備えての処理
-    end
   end
   
   def new
@@ -28,6 +21,6 @@ class TasksController < ApplicationController
   
   private
   def task_params
-    params.require(:task).permit(:title, :deadline, :duration, :description)
+    params.require(:task).permit(:student_id, :teacher_id, :title, :deadline, :duration, :description)
   end
 end
