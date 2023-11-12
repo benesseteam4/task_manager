@@ -1,10 +1,5 @@
 class TasksController < ApplicationController
   def index
-    if teacher_signed_in?
-      @email = current_teacher.email
-    elsif student_signed_in?
-      @email = current_student.email
-    end
   end
   
   def new
@@ -26,6 +21,6 @@ class TasksController < ApplicationController
   
   private
   def task_params
-    params.require(:task).permit(:title, :deadline, :duration, :description)
+    params.require(:task).permit(:student_id, :teacher_id, :title, :deadline, :duration, :description)
   end
 end
